@@ -1,29 +1,58 @@
+@charset "UTF-8";
+
+html {
+  font-size: 62.5%; /* 16px * 62.5% = 10px */
+}
+
+body {
+  color: #333;
+  font-size: 1.2rem; /* htmlに対して倍率指定 */
+  font-family: 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+}
+
+*, *::before, *::after { /* body以下のすべての要素と疑似要素 */
+  box-sizing: border-box;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: #d03c56;
+  text-decoration: none;
+}
+
 .header {
   width: 100%;
+  padding: 28px 0 10px;
+  background-image: url('../images/bg-header.gif') repeat-x;
+  box-shadow: 0 0 10px 1px #e3e3e3;
 }
+
 .wrapper {
   width: 970px;
   margin: 30px auto 40px;
 }
+
 .main {
   display: block; /* IE対策 */
   width: 660px;
   float: left;
 }
+
 .sidemenu {
   width: 275px;
   float: right;
 }
+
 .footer {
   width: 100%;
 }
+
 .clearfix::after {
   content: '';
   display: block;
   clear: both;
 }
 
-.header, .main, .sidemenu, .footer {
+/*.header, .main, .sidemenu, .footer {
   border: 1px solid #aaa;
   background-color: #ccc;
 }
@@ -32,4 +61,4 @@
 }
 .main, .sidemenu {
   height: 500px;
-}
+}*/
