@@ -19,6 +19,12 @@ a:link, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
 .header {
   width: 100%;
   padding: 28px 0 10px;
@@ -46,10 +52,49 @@ a:link, a:visited, a:hover, a:active {
   width: 100%;
 }
 
-.clearfix::after {
-  content: '';
+.logo {
+  width: 225px;
+  height: 56px;
+  margin: 0 auto;
+  background: url("../images/logo.png") no-repeat;
+  overflow: hidden; /* 文字隠し */
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+.logo a {
   display: block;
-  clear: both;
+  width: 100%;
+  height: 100%;
+}
+
+.global-nav {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.global-nav .nav-item {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.global-nav .nav-item a {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  line-height: 30px; /* heightと同じ高さにすることで、縦方向に中央寄せ */
+  text-align: center;
+  border-radius: 8px; /* 角を丸める */
+  color: #666;
+  font-size: 1.3rem;
+  letter-spacing: 1px; /* 文字間隔指定 */
+  transition: 0.15s; /* スタイルの変化にかかる時間を指定 */
+}
+
+.global-nav .nav-item.active a,
+.global-nav .nav-item a:hover {
+  background-color: #d03c56;
+  color: #fff;
 }
 
 /*.header, .main, .sidemenu, .footer {
